@@ -1,0 +1,6 @@
+imageio==2.36.0
+ultralytics==8.3.23
+Pillow==9.3.0
+opencv-python-headless==4.10.0.84
+
+# sudo apt install libgl1-mesa-glx

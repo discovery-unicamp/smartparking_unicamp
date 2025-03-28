@@ -1,0 +1,9 @@
+pandas  
+numpy  
+plotly  
+influxdb-client  
+pyarrow  
+scipy  
+requests  
+matplotlib  
+seaborn  

@@ -1,0 +1,8 @@
+numpy==1.26.4
+opencv-python-headless==4.11.0.86
+pillow==11.1.0
+psutil==7.0.0
+tflite-runtime==2.14.0
+
+# sudo apt-get install libopenblas-dev
+# pip install --upgrade numpy==1.26.4 if tflite fails, uninstall install numpy and then intall again
