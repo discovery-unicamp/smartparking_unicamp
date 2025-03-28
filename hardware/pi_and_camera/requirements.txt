@@ -1,0 +1,17 @@
+# yolo ultralytics
+#ultralytics==8.2.74
+#opencv-python-headless==4.9.0.80
+#redis==4.5.4
+#influxdb-client
+
+
+
+# yolo tflite
+numpy==1.26.4
+tflite-runtime
+redis
+influxdb-client
+pillow
+psutil
+# sudo apt-get install libopenblas-dev
+# pip install --upgrade numpy==1.26.4 if tflite fails, uninstall install numpy and then intall again

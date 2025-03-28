@@ -1,0 +1,7 @@
+opencv-python-headless==4.6.0.66
+numpy==1.23.4
+Pillow==9.3.0
+pytorchyolo==1.7.0
+torch==2.6.0
+torchvision==0.21.0
+psutil==7.0.0
