@@ -61,3 +61,11 @@ We used the PlatformIO framework because it provides a streamlined development e
 ### 6. Done!
 
 If everything was done correctly, the panels will start working just by turning on the power supply.
+
+## PCB Gerber Files
+
+We also included the Gerber files for the PCBs in the "pcb" folder. The circuit was divided into two different boards:  
+
+- **Controller**: This board holds the ESP8266 microcontroller and the two multiplexers. It also has connectors designed to output all 14 segment signals and ground. It needs to be powered with 5V from the voltage regulator. We also included the option to add a 2200uF capacitor to filter the input power.
+
+- **Panel**: Since we decided to build two displays, we need two of these PCBs. They contain all the MOSFETs and connect directly to the controller. Each panel has screw terminals that connect to the ground pins of the display segments.
