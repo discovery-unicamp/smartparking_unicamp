@@ -1,7 +1,7 @@
 # CNRPark+EXT Label File Generation
 
 ## Overview
-This script processes the **CNRPark+EXT** dataset and converts it into a **standard label file** used in our project. It extracts relevant information from the dataset and structures it into a CSV format that can be used for model training and evaluation.
+This script processes the **CNRPark+EXT** csv file and converts it into a **standard label file** names **`labels_cnrpark.csv`** used in our project. It extracts relevant information from the dataset and structures it into a CSV format that can be used for model training and evaluation.
 
 ## Mandatory Columns for a New Label File
 If you want to build a new label file, ensure it contains the following necessary columns:
@@ -38,7 +38,10 @@ The camera in this subset has **35 parking spots**. This can be confirmed at **F
 ## Dataset & Labels Download
 You can download the full **CNRPark+EXT** dataset and its corresponding labels from the following links:
 - **CNRPark+EXT.csv** (18.1 MB) - Labels file  
-  [Download](https://github.com/fabiocarrara/deep-parking/releases/download/archive/CNRPark+EXT.csv)
+  [Download](https://github.com/fabiocarrara/deep-parking/releases/download/archive/CNRPark+EXT.csv) and place it into labels folder
 - **CNR-EXT_FULL_IMAGE_1000x750.tar** (1.1 GB) - Dataset images  
   [Download](https://github.com/fabiocarrara/deep-parking/releases/download/archive/CNR-EXT_FULL_IMAGE_1000x750.tar)
 
+### Demo Images
+
+This [folder](../demo_images/) contains sample images extracted from the **CNRPark+EXT** dataset. These images are used to demonstrate the labeling format and the occupancy detection process.

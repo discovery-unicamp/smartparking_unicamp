@@ -45,38 +45,6 @@ with Image.open(mask_file) as mask:
     mask = np.array(mask)
 
 
-# Non-Maximum Suppression (NMS) function
-def nms(boxes, scores, iou_threshold=0.5):
-    x = boxes[:, 0]
-    y = boxes[:, 1]
-    width = boxes[:, 2]
-    height = boxes[:, 3]
-    
-    areas = width * height
-    order = scores.argsort()[::-1]
-
-    keep = []
-    while order.size > 0:
-        i = order[0]
-        keep.append(i)
-        
-        xx1 = np.maximum(x[i], x[order[1:]])
-        yy1 = np.maximum(y[i], y[order[1:]])
-        xx2 = np.minimum(x[i] + width[i], x[order[1:]] + width[order[1:]])
-        yy2 = np.minimum(y[i] + height[i], y[order[1:]] + height[order[1:]])
-        
-        w = np.maximum(0, xx2 - xx1)
-        h = np.maximum(0, yy2 - yy1)
-        
-        inter = w * h
-        iou = inter / (areas[i] + areas[order[1:]] - inter)
-        
-        inds = np.where(iou <= iou_threshold)[0]
-        order = order[inds + 1]
-
-    return keep
-
-
 def detection_matrix_modified(x, y, mask, img_width, img_height):
     """
     Checks if a point (x, y) is inside the given binary mask.
@@ -182,8 +150,7 @@ with open(OUTPUT_FILE, mode="w", newline="") as csv_file:
             # Get image dimensions
             img_height, img_width, _ = img.shape
 
-            # Convert OpenCV BGR to RGB (YOLO expects RGB images)
-            img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            img_rgb = img
             
             # Run the YOLO model on the image
             start_time = time.time()
@@ -200,19 +167,15 @@ with open(OUTPUT_FILE, mode="w", newline="") as csv_file:
                     car_boxes.append([x1, y1, x2, y2])
                     scores.append(confidence)
 
-            # Apply Non-Maximum Suppression (NMS)
             if car_boxes:
                 car_boxes = np.array(car_boxes)
                 scores =  car_boxes[:, 3]
-                keep = nms(car_boxes, scores, iou_threshold=0.5)
-                car_boxes = car_boxes[keep]
-
                 # Count cars inside the mask
                 car_count = count_cars_post(car_boxes, mask, img_width, img_height)
             else:
                 car_count = 0
 
-            # count nms time
+            # count time
             inference_time = time.time() - start_time
 
             cpu_usage = psutil.cpu_percent()
