@@ -70,7 +70,7 @@ aggregated_df['FN'] = ''  # Placeholder False Negatives
 aggregated_df['accuracy'] = ''  # Placeholder accuracy
 
 # Save the aggregated DataFrame to a CSV file (optional)
-aggregated_df.to_csv('labels_cnrpark_.csv', index=False)
+aggregated_df.to_csv('labels_cnrpark.csv', index=False)
 
 # Display the aggregated DataFrame (optional)
 print(aggregated_df)

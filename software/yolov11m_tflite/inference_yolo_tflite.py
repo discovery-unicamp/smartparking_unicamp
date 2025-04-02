@@ -21,33 +21,41 @@ mask_file = 'cnrpark_mask_original_img_1000_750_bw.png' # 'mask_original_img_768
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-def nms(boxes, scores, iou_threshold=0.5):
-    x = boxes[:, 0]
-    y = boxes[:, 1]
-    width = boxes[:, 2]
-    height = boxes[:, 3]
+def xywh_to_xyxy(boxes):
+    x, y, w, h = boxes[:, 0], boxes[:, 1], boxes[:, 2], boxes[:, 3]
+    x1 = x - w / 2
+    y1 = y - h / 2
+    x2 = x + w / 2
+    y2 = y + h / 2
+    return np.stack([x1, y1, x2, y2], axis=1)
+
+def nms(boxes, scores, iou_threshold=0.5, max_det=300):
+    if len(boxes) == 0:
+        return []
     
-    areas = width * height
-    order = scores.argsort()[::-1]
+    boxes = xywh_to_xyxy(boxes)  # Ensure correct format
+
+    x1, y1, x2, y2 = boxes[:, 0], boxes[:, 1], boxes[:, 2], boxes[:, 3]
+    areas = (x2 - x1) * (y2 - y1)
+    order = scores.argsort()[::-1]  # Sort by confidence score
 
     keep = []
-    while order.size > 0:
+    while order.size > 0 and len(keep) < max_det:
         i = order[0]
         keep.append(i)
-        
-        xx1 = np.maximum(x[i], x[order[1:]])
-        yy1 = np.maximum(y[i], y[order[1:]])
-        xx2 = np.minimum(x[i] + width[i], x[order[1:]] + width[order[1:]])
-        yy2 = np.minimum(y[i] + height[i], y[order[1:]] + height[order[1:]])
-        
+
+        xx1 = np.maximum(x1[i], x1[order[1:]])
+        yy1 = np.maximum(y1[i], y1[order[1:]])
+        xx2 = np.minimum(x2[i], x2[order[1:]])
+        yy2 = np.minimum(y2[i], y2[order[1:]])
+
         w = np.maximum(0, xx2 - xx1)
         h = np.maximum(0, yy2 - yy1)
-        
         inter = w * h
-        iou = inter / (areas[i] + areas[order[1:]] - inter)
-        
-        inds = np.where(iou <= iou_threshold)[0]
-        order = order[inds + 1]
+        union = areas[i] + areas[order[1:]] - inter
+        iou = inter / (union + 1e-6)
+
+        order = order[np.where(iou <= iou_threshold)[0] + 1]
 
     return keep
 
@@ -81,7 +89,7 @@ def count_cars(input_data, mask,th=0.25):
         detected_boxes = np.array(detected_boxes)
         scores = detected_boxes[:, 3]  # Assuming the score is stored in the height dimension
         
-        keep = nms(detected_boxes, scores, iou_threshold=0.5)
+        keep = nms(detected_boxes, scores, iou_threshold=0.45)
         detected_boxes = detected_boxes[keep]
 
         cars = count_cars_post(detected_boxes,mask)
