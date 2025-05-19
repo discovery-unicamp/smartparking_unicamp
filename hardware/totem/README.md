@@ -23,7 +23,7 @@ We will first focus on constructing the individual components, then we will conn
 
 ### 1. Assembling the board
 
-Since the totem would be installed outdoors, its important we make sure the base of the display is resistant as we 
+Since the totem is installed outdoor, its important we make sure the base of the display is resistant as we 
 want it to last as long as possible. A wooden board was chosen large enough to fit 2 digits with a decent size.
 We then cut 14 segments of equal length from the LED strip, and fixated them with their own glue on the board, as shown 
 in the following illustration.
@@ -64,8 +64,18 @@ If everything was done correctly, the panels will start working just by turning 
 
 ## PCB Gerber Files
 
-We also included the Gerber files for the PCBs in the "pcb" folder. The circuit was divided into two different boards:  
+We also included the Gerber files for the PCBs in the "pcb" folder. This files can be sent to PCB manufacturers and that will ensure a more reliable and durable circuit. You can wether solder yourself the components or request a PCB with the components soldered. The circuit is divided into two different boards:  
 
 - **Controller**: This board holds the ESP8266 microcontroller and the two multiplexers. It also has connectors designed to output all 14 segment signals and ground. It needs to be powered with 5V from the voltage regulator. We also included the option to add a 2200uF capacitor to filter the input power.
 
+Back:
+![Controller 2](../../assets/docs/controller_2.png)
+Front:
+![Controller 1](../../assets/docs/controller_1.png)
+
 - **Panel**: Since we decided to build two displays, we need two of these PCBs. They contain all the MOSFETs and connect directly to the controller. Each panel has screw terminals that connect to the ground pins of the display segments.
+
+Back:
+![Display 2](../../assets/docs/display_2.png)
+Front:
+![Display 1](../../assets/docs/display_1.png)

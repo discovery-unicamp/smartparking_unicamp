@@ -59,7 +59,7 @@ If you want to count **all** vehicles in the image, use **`all_black_mask.png`**
 You can edit the mask using tools like **GIMP** or **Photoshop** to define custom counting areas. Simply paint the regions where objects should be counted in **black**.
 
 You need to have an **yolo11m (TFLite) Model**: The model used for car detection.  
-  - 📥 **Download `yolo11m_float16.tflite` Pre-Trained model from our Google Drive Folder**: [Link](https://drive.google.com/drive/folders/1D_88IY0JBwUdi3EKsSAzLj1hxN6SJGit?usp=sharing) . There is also an option to export yourself the model. Details in the end of this README
+  - 📥 **Download `yolo11m_float16.tflite` Pre-Trained model from OSF**: [Link](https://osf.io/yq6cn/) . There is also an option to export yourself the model. Details in the end of this README
 
 ---
 

@@ -20,6 +20,6 @@ assets/results/results_yolo_ultralytics/yolov8n/batch_20250326T004514/results*.j
 assets/original/
 assets/results/
 **/11m*.png
-**/software/yolov11m_tflite/*
+# **/software/yolov11m_tflite/*
 **/*.parquet
 .DS_Store
