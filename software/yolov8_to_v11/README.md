@@ -91,7 +91,7 @@ To execute the script, you need to provide some command-line arguments. Here’s
   - `debug`: Saves all figures generated during the process.
   - `no`: Does not save any figures.
   - `partial`: Saves only essential figures.
-- `--model`: YOLO model to be used, e.g., `yolov8n`, `yolov8x`, `yolov9t`, `yolov9x`, `yolov10n`, `yolov10x`,`yolo11n`,`yolo11x`. The model will be automatically downloaded. You can also **Downloadsome  Pre-Trained model from our Google Drive Folder**: [Link](https://drive.google.com/drive/folders/1D_88IY0JBwUdi3EKsSAzLj1hxN6SJGit?usp=sharing)  
+- `--model`: YOLO model to be used, e.g., `yolov8n`, `yolov8x`, `yolov9t`, `yolov9x`, `yolov10n`, `yolov10x`,`yolo11n`,`yolo11x`. The model will be automatically downloaded. You can also **Download some  Pre-Trained model from OSF**: [Link](https://osf.io/yq6cn/)
 - `mask_file`: Selected desired mask file. Default is all black, or not use a mask.
 
 ### Example usage:
