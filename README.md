@@ -103,7 +103,7 @@ Key modules:
 ## Collaborators
 
 **Present:**
-- [Juliana Freitag Borin]((http://lattes.cnpq.br/4534936707754253))
+- [Juliana Freitag Borin](http://lattes.cnpq.br/4534936707754253)
 - [Luis Fernando Gomez Gonzalez](http://lattes.cnpq.br/4910241356954777)
 - [Gustavo P. C. P. da Luz](http://lattes.cnpq.br/3340329193414132)
 - [Gabriel Massuyoshi Sato](http://lattes.cnpq.br/7245309149482723)
