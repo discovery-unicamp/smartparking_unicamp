@@ -112,10 +112,10 @@ Key modules:
 
 **Past:**
 - [Darlinne H. P. Soto](http://lattes.cnpq.br/9411807355500538)
-- [Matheus de S. Oliveira](m203407@dac.unicamp.br)
+- [Matheus de S. Oliveira](mailto:m203407@dac.unicamp.br)
 - [Alonso M. P. Huachaca](http://lattes.cnpq.br/8095974767817734)
 - [Alexandre Junqueira](https://www.linkedin.com/in/alexandre-junqueira/)
-- [J. V. Baggio](j170710@dac.unicamp.br)
+- [J. V. Baggio](mailto:j170710@dac.unicamp.br)
 
 ---
 
