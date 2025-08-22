@@ -1,5 +1,4 @@
 # 🚗 Smart Parking System with Deep Learning at Unicamp
-🌎 [English](./README.md) | [Português](./README_pt.md)
 
 This repository contains the complete implementation of a **real-time smart parking monitoring system** using **edge computing and deep learning**, representing a **decade of research** at [Unicamp](https://www.unicamp.br/).  
 
@@ -13,6 +12,12 @@ We value your opinion!
 If you have any **complaints, compliments, or suggestions** about the IC2 Smart Parking Project, please share them with us using the form below:
 
 👉 [Fill the Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLSddZz8VQ70wRrH3bNkHJdl047nvhdn9_KWcyulvhRllvPTyZA/viewform?usp=header)
+
+🌎 Português:
+A sua opinião é muito importante!  
+Caso tenha **reclamações, elogios ou sugestões** sobre o Projeto IC2 Smart Parking, compartilhe conosco no formulário abaixo:
+
+👉 [Preencha o Formulário de Feedback](https://docs.google.com/forms/d/e/1FAIpQLSddZz8VQ70wRrH3bNkHJdl047nvhdn9_KWcyulvhRllvPTyZA/viewform?usp=header)
 
 ---
 ## 📑 Table of Contents
