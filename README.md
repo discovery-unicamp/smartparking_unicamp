@@ -1,4 +1,5 @@
 # 🚗 Smart Parking System with Deep Learning at Unicamp
+🌎 [English](./README.md) | [Português](./README_pt.md)
 
 This repository contains the complete implementation of a **real-time smart parking monitoring system** using **edge computing and deep learning**, representing a **decade of research** at [Unicamp](https://www.unicamp.br/).  
 
@@ -6,6 +7,14 @@ The system evolved through multiple research phases, culminating in real-world d
 
 ---
 
+## 📝 Feedback: Complaints, Compliments & Suggestions
+
+We value your opinion!  
+If you have any **complaints, compliments, or suggestions** about the IC2 Smart Parking Project, please share them with us using the form below:
+
+👉 [Fill the Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLSddZz8VQ70wRrH3bNkHJdl047nvhdn9_KWcyulvhRllvPTyZA/viewform?usp=header)
+
+---
 ## 📑 Table of Contents
 - [Overview](#overview)
 - [Architecture](#architecture)
@@ -103,11 +112,12 @@ Key modules:
 ## Collaborators
 
 **Present:**
-- [Juliana Freitag Borin](http://lattes.cnpq.br/4534936707754253)
-- [Luis Fernando Gomez Gonzalez](http://lattes.cnpq.br/4910241356954777)
-- [Gustavo P. C. P. da Luz](http://lattes.cnpq.br/3340329193414132)
-- [Gabriel Massuyoshi Sato](http://lattes.cnpq.br/7245309149482723)
-- [Tiago Godoi Bannwart](http://lattes.cnpq.br/4897522676378277)
+- Supervisor - [Professor Juliana Freitag Borin](http://lattes.cnpq.br/4534936707754253)
+- Supervisor - [Dr. Luis Fernando Gomez Gonzalez](http://lattes.cnpq.br/4910241356954777)
+- Code - [Gustavo P. C. P. da Luz](http://lattes.cnpq.br/3340329193414132)
+- Code - [Gabriel Massuyoshi Sato](http://lattes.cnpq.br/7245309149482723)
+- Hardware - [Tiago Godoi Bannwart](http://lattes.cnpq.br/4897522676378277)
+- Support - [Smart Campus Unicamp]([http://lattes.cnpq.br/4897522676378277](https://smartcampus.prefeitura.unicamp.br/))
 
 
 **Past:**
@@ -115,7 +125,7 @@ Key modules:
 - [Matheus de S. Oliveira](mailto:m203407@dac.unicamp.br)
 - [Alonso M. P. Huachaca](http://lattes.cnpq.br/8095974767817734)
 - [Alexandre Junqueira](https://www.linkedin.com/in/alexandre-junqueira/)
-- [J. V. Baggio](mailto:j170710@dac.unicamp.br)
+- [J. V. Baggio](https://www.linkedin.com/in/joao-victor-baggio/)
 
 ---
 
