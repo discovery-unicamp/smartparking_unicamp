@@ -117,12 +117,12 @@ Key modules:
 ## Collaborators
 
 **Present:**
-- Supervisor - [Professor Juliana Freitag Borin](http://lattes.cnpq.br/4534936707754253)
-- Supervisor - [Dr. Luis Fernando Gomez Gonzalez](http://lattes.cnpq.br/4910241356954777)
-- Code - [Gustavo P. C. P. da Luz](http://lattes.cnpq.br/3340329193414132)
-- Code - [Gabriel Massuyoshi Sato](http://lattes.cnpq.br/7245309149482723)
-- Hardware - [Tiago Godoi Bannwart](http://lattes.cnpq.br/4897522676378277)
-- Support - [Smart Campus Unicamp]([http://lattes.cnpq.br/4897522676378277](https://smartcampus.prefeitura.unicamp.br/))
+- [Professor Juliana Freitag Borin](http://lattes.cnpq.br/4534936707754253)
+- [Dr. Luis Fernando Gomez Gonzalez](http://lattes.cnpq.br/4910241356954777)
+- [Gustavo P. C. P. da Luz](http://lattes.cnpq.br/3340329193414132)
+- [Gabriel Massuyoshi Sato](http://lattes.cnpq.br/7245309149482723)
+- [Tiago Godoi Bannwart](http://lattes.cnpq.br/4897522676378277)
+- [Smart Campus Unicamp](https://smartcampus.prefeitura.unicamp.br/)
 
 
 **Past:**
