@@ -1,0 +1,39 @@
+{
+    "id": "urn:ngsi-ld:ParkingSensor:IC2",
+    "type": "ParkingSensor",
+    "description": {
+        "type": "Property",
+        "value": "Parking Sensor installed in the IC2 building, it is a raspberry pi equipped with a camera."
+    },
+    "deviceType": {
+      "type": "Property",
+      "value": "raspberryPi-camera"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -47.064242413877196,
+                -22.814635803933584
+            ]
+        }
+    },
+    "measurementType": {
+      "type": "Property",
+      "value": "parkingSpotOccupancy"
+    },
+    "name": {
+      "type": "Property",
+      "value": "IC2-ParkingSensor"
+    },
+    "numValue": {
+      "type": "Property",
+      "value": 0
+    },
+    "refParkingSite": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:OffStreetParking:IC2-IC2-OffStreetParking"]
+    }
+}
