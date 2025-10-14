@@ -1,36 +1,40 @@
 #include <Arduino.h>
+#include <OTA.h>
 
 #include "Display.h"
 #include "Wifi.h"
-#include "HttpClient.h"
-#include "Influx.h"
-//#include "OTA.h"
+#include "Query.h"
 
-unsigned int check_interval_s = 30;
-unsigned long last_check = 0;
+unsigned int read_interval_s = 10;
+unsigned long last_read = 0;
 
 void setup() {
     pinMode(LED_BUILTIN, OUTPUT);
     digitalWrite(LED_BUILTIN, HIGH);
     Serial.begin(115200);
 
+    Serial.println(String("Current Version: ") + String(VERSION));
+
     Display::setup_pins();
     Wifi::setup();
-//    OTA::setup();
+    OTA::setup();
 
-    last_check = millis() - check_interval_s * 1000;
+    OTA::check();
+
+    last_read = millis() - read_interval_s * 1000;
 }
 
 void loop() {
-    if (millis() - last_check >= check_interval_s * 1000) {
-        int count = Influx::read_last();
+    if (millis() - last_read >= read_interval_s * 1000) {
+        int count = 0;
+        if (Query::read_last(&count)) {
+            if (count > 16 || count < 0) Display::disable();
+            else Display::write(count);
+        }
 
-        if (count > 16 || count < 0) Display::disable();
-        else Display::write(count);
-
-        last_check = millis();
+        last_read = millis();
     }
 
-    if (!Influx::is_updated()) Display::disable();
-//    OTA::check();
+    if (!Query::is_updated()) Display::disable();
+    if (OTA::should_check()) OTA::check();
 }

@@ -1,15 +1,25 @@
 #ifndef TOTEM_CREDENTIALS_H
 #define TOTEM_CREDENTIALS_H
 
-// Credentials to configure the WiFi connection
-#define WIFI_ID "<SSID>"
-#define WIFI_PASSWORD "<PASSWORD>"
+/*=========================================
+ *            WiFI Credentials
+ *=========================================*/
+#define WIFI_ID ""
+#define WIFI_PASSWORD ""
 
-// Credentials to configure the influxDB connection
-#define INFLUXDB_BUCKET "<BUCKET>"
-#define INFLUXDB_TOKEN "<TOKEN>"
-#define INFLUXDB_ORG "<ORG>"
-#define INFLUXDB_ADDRESS "<ADDRESS>"
-#define INFLUXDB_PORT 8086
+/*=========================================
+ *        OTA Updates Credentials
+ *=========================================*/
+#define OTA_ADDRESS ""
+#define OTA_USERNAME ""
+#define OTA_PASSWORD ""
 
+#ifndef VERSION
+#define VERSION 1
 #endif
+
+/*=========================================
+ *        ParkingLot API Credentials
+ *=========================================*/
+#define API_ADDRESS ""
+#define BACKUP_API_ADDRESS ""

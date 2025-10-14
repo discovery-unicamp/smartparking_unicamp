@@ -15,7 +15,8 @@ The totem features two LED panels (front and back) displaying real-time parking 
 | Voltage Regulator | LM2596 (12V→5V) | 1 |
 | Multiplexer | CD4511BE | 2 |
 | MOSFET | TIP122 | 14 |
-| LED Panel | 2-digit 7-segment (Common Anode) | 2 |
+| Resistor | 1.2k Ohms| 14 |
+| LED Panel | 2-digit 7-segment | 2 |
 
 ## Installation Guide
 
@@ -28,7 +29,7 @@ want it to last as long as possible. A wooden board was chosen large enough to f
 We then cut 14 segments of equal length from the LED strip, and fixated them with their own glue on the board, as shown 
 in the following illustration.
 
-![board_illustration](../../assets/totem_illustrations/board.png)
+![board_illustration](../../assets/docs/board.png)
 
 
 ### 2. Wiring the LED strip
@@ -39,10 +40,10 @@ We made small holes on the board so the wires could be hidden on the back, for o
 
 ### 3. Assembling the circuits
 
-Let's start by taking a closer look at the multiplexer and MOSFET. The CD4511BE is a multiplexer designed to decode its 4-pin digital inputs into segments signals. Because it is controlled by the ESP8266 microcontroller, the decoder runs at 5V and its also not made to drive high currents, so in order to actually control the leds, each of the 7 decoder outputs are connected to other 7 MOSFETs. The MOSFETs themselves have their base connected to one decoder output, the emitter is connected to ground and the collector is connected to the ground wire of its respective led strip segment.
+Let's start by taking a closer look at the multiplexer and MOSFET. The CD4511BE is a multiplexer designed to decode its 4-pin digital inputs into segments signals. Because it is controlled by the ESP8266 microcontroller, the decoder runs at 5V and its also not made to drive high currents, so in order to actually control the leds, each of the 7 decoder outputs are connected to other 7 MOSFETs. The MOSFETs themselves have their base connected to one decoder output with a resistor in between, the emitter is connected to ground and the collector is connected to the ground wire of its respective led strip segment.
 Bellow is a diagram illustrating how each segment is controlled. 
 
-![mux_mosfet](../../assets/totem_illustrations/mux_mosfet.png)
+![mux_mosfet](../../assets/docs/mux_mosfet.png)
 
 Because the largest number displayed is 16, we needed two 7-segment displays, requiring two multiplexers and 14 MOSFETs.
 
@@ -79,3 +80,5 @@ Back:
 ![Display 2](../../assets/docs/display_2.png)
 Front:
 ![Display 1](../../assets/docs/display_1.png)
+
+> The PCBs do not include a dedicated footprint for the resistors. We recommend including them beneath the connectors on the display board. 
