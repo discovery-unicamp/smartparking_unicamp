@@ -1,0 +1,120 @@
+{
+    "id": "urn:ngsi-ld:OffStreetParking:IC2-OffStreetParking",
+    "type": "OffStreetParking",
+    "category": {
+        "type": "Property",
+        "value": ["forDisabled", "forMembers", "free", "public"]
+     },
+    "description": {
+        "type": "Property",
+	"value": "Off Street Parking in front of the IC2 Building with 16 available spots."
+    },
+    "images": {
+       "type": "Property",
+       "value": ["https://www.google.com/maps/@-22.8147513,-47.0641531,3a,90y,237.55h,76.96t/data=!3m7!1e1!3m5!1sa62i4VHs2IMgyVVkxG5-DQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D13.035531924836505%26panoid%3Da62i4VHs2IMgyVVkxG5-DQ%26yaw%3D237.55290115083352!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"]
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+	   "addressCountry": "Brazil",
+	   "addressLocality": "Campinas",
+	   "addressRegion": "São Paulo",
+	   "district": "Barão Geraldo",
+	   "postOfficeBoxNumber": "13083",
+	   "postalCode": "13083-852",
+	   "streetAddress": "Avenida Albert Einstein",
+	   "streetNr": "1251"
+         }
+    },
+    "availableSpotNumber": {
+       "type": "Property",
+       "value": 10
+    },
+    "location": {
+       "type": "GeoProperty",
+       "value": {
+          "type": "Polygon",
+	  "coordinates": [[
+	     [-47.06433, -22.81496],
+	     [-47.06439, -22.81476],
+	     [-47.06421, -22.81470],
+	     [-47.06412,-22.81488],
+	     [-47.06433, -22.81496]
+	  ]]
+       }
+    },
+    "name": {
+       "type": "Property",
+       "value": "IC2 OffStreet Parking"
+    },
+    "occupancy": {
+       "type": "Property",
+       "value": 0.5
+    },
+    "occupancyDetectionType": {
+       "type": "Property",
+       "value": [
+          "singleSpaceDetection", "modelBased"
+       ]
+    },
+    "occupiedSpotNumber": {
+       "type": "Property",
+       "value": 5
+    },
+    "owner": {
+       "type": "Property",
+       "value": ["urn:ngsi-ld:Organization:IC"]
+    },
+    "parkingMode": {
+       "type": "Property",
+       "value": ["parallelParking"]
+    },
+    "refBuilding": {
+      "type": "Relationship",
+      "object": ["urn:ngsi-ld:Building:IC2"]
+    },
+    "refParkingGroup": {
+       "type": "Relationship",
+       "object": [
+          "urn:ngsi-ld:ParkingGroup:IC2-Staff",
+	  "urn:ngsi-ld:ParkingGroup:IC2-Staff-DisabledOnly"
+       ]
+    },
+    "refParkingSensor": {
+      "type": "Relationship",
+      "object": ["urn:ngsi-ld:IC2-ParkingSensor"]
+    }
+    "refParkingSpot": {
+       "type": "Relationship",
+       "object": [
+          "urn:ngsi-ld:ParkingSpot:IC2-000",
+          "urn:ngsi-ld:ParkingSpot:IC2-001",
+          "urn:ngsi-ld:ParkingSpot:IC2-002",
+          "urn:ngsi-ld:ParkingSpot:IC2-003",
+          "urn:ngsi-ld:ParkingSpot:IC2-004",
+          "urn:ngsi-ld:ParkingSpot:IC2-005",
+          "urn:ngsi-ld:ParkingSpot:IC2-006",
+          "urn:ngsi-ld:ParkingSpot:IC2-007",
+          "urn:ngsi-ld:ParkingSpot:IC2-008",
+          "urn:ngsi-ld:ParkingSpot:IC2-009",
+          "urn:ngsi-ld:ParkingSpot:IC2-010",
+          "urn:ngsi-ld:ParkingSpot:IC2-011",
+          "urn:ngsi-ld:ParkingSpot:IC2-012",
+          "urn:ngsi-ld:ParkingSpot:IC2-013",
+          "urn:ngsi-ld:ParkingSpot:IC2-014",
+          "urn:ngsi-ld:ParkingSpot:IC2-015"	  
+       ]
+    },
+    "refParkingTotem": {
+      "type": "Relationship",
+      "object": ["urn:ngsi-ld:Totem:IC2-Totem"]
+    },
+    "status": {
+       "type": "Property",
+       "value": ["spacesAvailable"]
+    },
+    "totalSpotNumber": {
+       "type": "Property",
+       "value": 16
+    }
+}

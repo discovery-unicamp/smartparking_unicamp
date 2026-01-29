@@ -1,0 +1,58 @@
+{
+    "id": "urn:ngsi-ld:ParkingSpot:IC2-000",
+    "type": "ParkingSpot",
+    "category": {
+        "type": "Property",
+        "value": [
+            "offStreet"
+        ]
+    },
+    "description": {
+        "type": "Property",
+        "value": "Parking spot 00 located near the entrance of the IC2 Building, reserved for staff vehicles."
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressCountry": "Brazil",
+            "addressLocality": "Campinas",
+            "addressRegion": "São Paulo",
+            "district": "Barão Geraldo",
+            "postOfficeBoxNumber": "13083",
+            "postalCode": "13083-852",
+            "streetAddress": "Avenida Albert Einstein",
+            "streetNr": "1251"
+        }
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -47.064251959883066,
+                -22.81476512075327
+            ]
+        }
+    },
+    "refDevice": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:ParkingSensor:IC2"
+        ]
+    },
+    "refParkingGroup": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:ParkingGroup:IC2-Staff"        ]
+    },
+    "refParkingSite": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:OffStreetParking:IC2-OffStreetParking"
+        ]
+    },
+    "status": {
+        "type": "Property",
+        "value": "free"
+    }
+}

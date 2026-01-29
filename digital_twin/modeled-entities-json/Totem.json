@@ -1,0 +1,60 @@
+{
+    "id": "urn:ngsi-ld:Totem:IC2-Totem",
+    "type": "Totem",
+    "address": {
+        "type": "Property",
+        "value": {
+	   "addressCountry": "Brazil",
+	   "addressLocality": "Campinas",
+	   "addressRegion": "São Paulo",
+	   "district": "Barão Geraldo",
+	   "postOfficeBoxNumber": "13083",
+	   "postalCode": "13083-852",
+	   "streetAddress": "Avenida Albert Einstein",
+	   "streetNr": "1251"
+         }
+    },
+    "areaServed": {
+      "type": "Property",
+      "value": "IC2 Parking"
+    },
+    "category": {
+      "type": "Property",
+      "value": ["multimedia"]
+    },
+    "controlledProperty": {
+      "type": "Property",
+      "value": ["occupancy"]
+    },
+    "description": {
+        "type": "Property",
+        "value": "Totem to show the number of available spots of the IC2 Parking for incoming drivers."
+    },
+    "deviceCategory": {
+      "type": "Property",
+      "value": ["multimedia"]
+    },
+    "deviceState": {
+      "type": "Property",
+      "value": "operational"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -47.064378585396156,
+                -22.81481664875838
+            ]
+        }
+    },
+    "refParkingSite": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:OffStreetParking:IC2-IC2-OffStreetParking"]
+    },
+    "value": {
+      "type": "Property",
+      "value": 0
+    }
+}
