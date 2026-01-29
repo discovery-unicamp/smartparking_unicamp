@@ -1,0 +1,71 @@
+{
+    "id": "urn:ngsi-ld:ParkingGroup:IC2-Staff-DisabledOnly",
+    "type": "ParkingGroup",
+    "description": {
+        "type": "Property",
+	"value": "Parking group reserved exclusively for only disabled IC staff members. Located near the IC2 Building, it provides free parking with no fee required. It contains 2 parking spots."
+    },
+    "availableSpotNumber": {
+       "type": "Property",
+       "value": 0
+    },
+    "category": {
+       "type": "Property",
+       "value": ["offStreet", "onlyDisabled", "free"]
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+	   "addressCountry": "Brazil",
+	   "addressLocality": "Campinas",
+	   "addressRegion": "São Paulo",
+	   "district": "Barão Geraldo",
+	   "postOfficeBoxNumber": "13083",
+	   "postalCode": "13083-852",
+	   "streetAddress": "Avenida Albert Einstein",
+	   "streetNr": "1251"
+         }
+    },
+    "location": {
+       "type": "GeoProperty",
+       "value": {
+          "type": "Polygon",
+	  "coordinates": [
+             [
+                [-47.06438285382501, -22.81478224778894],
+                [-47.064345449315766, -22.814768967454086],
+                [-47.064329421964516, -22.814805629597885],
+                [-47.06436582345387, -22.814817188427085],
+		        [-47.06438285382501, -22.81478224778894]
+             ]
+          ]
+       }
+    },
+    "name": {
+       "type": "Property",
+       "value": "IC-2 only disabled Staff Parking Group"
+    },
+    "occupancyDetectionType": {
+       "type": "Property",
+       "value": [ "singleSpaceDetection" ]
+    },
+    "parkingMode": {
+       "type": "Property",
+       "value": ["perpendicularParking"]
+    },
+    "refParkingSite": {
+       "type": "Relationship",
+       "object": ["urn:ngsi-ld:OffStreetParking:IC2-OffStreetParking"]
+    },
+    "refParkingSpot": {
+      "type": "Relationship",
+      "object": [
+        "urn:ngsi-ld:ParkingSpot:IC2-008",
+        "urn:ngsi-ld:ParkingSpot:IC2-009"
+      ]
+    },
+    "totalSpotNumber": {
+       "type": "Property",
+       "value": 2
+    }
+}
