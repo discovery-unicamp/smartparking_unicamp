@@ -134,9 +134,23 @@ Key modules:
 
 ---
 
-## How to Cite
+## How to Cite - List of Papers, Depending on 
 
 ```bibtex
+# for pixel wise, yolo from v8 to v11
+@article{PCPDALUZ2026101858,
+title = {Smart parking with pixel-wise ROI selection for vehicle detection using YOLOv8, YOLOv9, YOLOv10, and YOLOv11},
+journal = {Internet of Things},
+volume = {36},
+pages = {101858},
+year = {2026},
+issn = {2542-6605},
+doi = {https://doi.org/10.1016/j.iot.2025.101858},
+url = {https://www.sciencedirect.com/science/article/pii/S2542660525003725},
+author = {Gustavo {P C P da Luz} and Gabriel {Massuyoshi Sato} and Luis {Fernando Gomez Gonzalez} and Juliana {Freitag Borin}},
+}
+
+# old version
 @article{da2024smart,
   title={Smart Parking with Pixel-Wise ROI Selection for Vehicle Detection Using YOLOv8, YOLOv9, YOLOv10, and YOLOv11},
   author={da Luz, Gustavo PCP and Sato, Gabriel Massuyoshi and Gonzalez, Luis Fernando Gomez and Borin, Juliana Freitag},
@@ -145,6 +159,7 @@ Key modules:
   doi= {10.48550/arXiv.2412.01983}
 }
 
+# for deployment, history, maskrcnn, yolov3, yolov11 tflite
 @inproceedings{da202510,
   author = {Gustavo da Luz and Gabriel Sato and Tiago Bannwart and Luis Gonzalez and Juliana Borin},
   title = {10 Years of Deep Learning for Vehicle Detection at a Smart Parking : What has Changed?},
@@ -157,6 +172,23 @@ Key modules:
   doi = {10.5753/courb.2025.8869},
   url = {https://sol.sbc.org.br/index.php/courb/article/view/35256}
 }
+
+# for the tv box server
+@inproceedings{score,
+ author = {Tiago Bannwart and Gustavo Luz and Gabriel Sato and Luis Gonzalez and Juliana Borin},
+ title = { TV Boxes as Support Servers for IoT Applications},
+ booktitle = {Anais do I Workshop on Sustainable Computing and Technology Reuse},
+ location = {Campinas/SP},
+ year = {2025},
+ keywords = {},
+ issn = {0000-0000},
+ pages = {1--4},
+ publisher = {SBC},
+ address = {Porto Alegre, RS, Brasil},
+ doi = {10.5753/score.2025.17175},
+ url = {https://sol.sbc.org.br/index.php/score/article/view/39613}
+}
+
 ```
 
 ---
