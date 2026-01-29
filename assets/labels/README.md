@@ -45,3 +45,8 @@ You can download the full **CNRPark+EXT** dataset and its corresponding labels f
 ### Demo Images
 
 This [folder](../demo_images/) contains sample images extracted from the **CNRPark+EXT** dataset. These images are used to demonstrate the labeling format and the occupancy detection process.
+
+
+### Custom Labeling
+
+This [folder](./custom_labeling/) contains scripts for a custom annotation, using spot-wise approach or just counting cars for MAE only computation.

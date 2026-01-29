@@ -136,3 +136,30 @@ The script `export_tflite.py` loads a pre-trained **YOLO** model and exports it 
 - **Float16 (`yolo11n_float16.tflite`)**: Lower memory usage, faster inference.  
 
 The float16 model is preferred for deployment on resource-constrained devices. 🚀  
+
+
+
+# Spot-wise
+We would like to highlight that this demonstration is only to show how the method works, and do not correspond to the actual deployed solution at cnrpark. We did not experiment with any parameters, thus the following part is just a proof of concept. Our results are published at the paper "Spot-Wise Smart Parking: An Edge-Enabled Architecture with YOLOv11 Towards a Digital Twin" within the IC dataset.
+---
+
+# 1. Dataset Annotation & Analysis
+*Tools for generating ground truth data (`.csv`) and validating dataset statistics.*
+
+### 🛠️ Labeling Tools
+
+use the labeling script in [labels folder](../../assets/labels/custom_labeling/README.md).
+
+
+### `inference_yolo_tflite_spots.py` (Spot-wise Analysis)
+This script processes the detection output to analyze individual parking spots.
+
+* **Function:** Maps the global detections to specific parking spot coordinates defined in the dataset.
+* **Logic:**
+    * **Default:** Performs standard **spot-wise** analysis (checking if a center point or box is close enough to a spot).
+    * **SPLIT_LARGE = True:** Enables **Spot-wise + ABBP** (Adaptive Bounding Box Processing). This handles larger vehicles or occlusions by splitting larger detection boxes into multiple candidate spots.
+* **Usage:**
+    * Set `SPLIT_LARGE` variable inside the script to toggle the ABBP logic.
+    * Ensures individual spot occupancy is correctly attributed, even for difficult detection cases.
+    * to apply the z-score method to understand thresholds, refer to the [appendix_zscore folder](./appendix_zscore/).
+    * the two running options suggestion are commented at the script
