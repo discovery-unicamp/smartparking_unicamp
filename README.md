@@ -51,7 +51,34 @@ It has undergone **four major research phases** since 2015, progressively improv
 
 ![System Evolution](assets/docs/system_evolution.png)  
 
-### 🚀 2025 – Second Deployment
+### 🔍 2026 – Digital Twin & Spot-Wise Analysis
+- **Advanced architecture** moving towards a **Digital Twin** with **spot-wise analysis**.
+
+**Journal Publications**
+- **[Submitted] Spot-wise smart parking: An edge-enabled architecture with YOLOv11 towards a digital twin**.  
+  Submitted to the *Journal of Internet Services and Applications (JISA)*.  
+  Preprint coming soon to **arXiv**.
+- **Smart parking with pixel-wise ROI selection for vehicle detection using YOLOv8, YOLOv9, YOLOv10, and YOLOv11**  
+    *Internet of Things, Volume 36, 2026*  
+    [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2542660525003725)
+
+    Result from Research Phase 3 got published
+
+
+
+---
+
+### 🚀 2025 – Second Semester
+- **Sustainable edge computing**:
+  - Investigation the use of **TV Boxes** as a server for IoT and smart parking systems (November 2025).
+  - **[TV Boxes as Support Servers for IoT Applications](https://sol.sbc.org.br/index.php/score/article/view/39613)** 
+    Published in the *Workshop on Sustainable Computing and Technology Reuse (SCORE 2025)*.
+
+- **Media feature**: Research highlighted in *Jornal da Unicamp* (August 2025),  
+  **[“Grupo testa os limites da inteligência computacional no campus”](https://jornal.unicamp.br/edicao/730/grupo-testa-os-limites-da-inteligencia-computacional-no-campus/)**, showcasing our smart parking and campus initiatives.
+
+
+### 🚀 2025 – Second Deployment - First Semester
 - Deployed **YOLOv11m** optimized with TensorFlow Lite.
 - Achieved best trade-off between accuracy and inference speed for edge computing.
 - Results published in:
