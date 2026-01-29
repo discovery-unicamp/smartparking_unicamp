@@ -1,0 +1,3 @@
+[submodule "hardware/tvbox-iot-applications-support-server"]
+	path = hardware/tvbox-iot-applications-support-server
+	url = https://github.com/discovery-unicamp/tvbox-iot-applications-support-server.git

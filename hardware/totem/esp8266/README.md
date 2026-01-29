@@ -1,7 +1,7 @@
 # ESP8266 2-Digit 7-Segment Display Controller
 
 ## Introduction
-This project is designed to run on an **ESP8266** microcontroller, which controls a **2-digit 7-segment display** using a **CD4511BE** BCD to 7-segment decoder. The ESP8266 retrieves data from an **InfluxDB** database and updates the display accordingly.
+This project is designed to run on an **ESP8266** microcontroller, which controls a **2-digit 7-segment display** using a **CD4511BE** BCD to 7-segment decoder. The ESP8266 retrieves data from an **Web Server** and updates the display accordingly.
 
 ## Table of Contents
 - [ESP8266 2-Digit 7-Segment Display Controller](#esp8266-2-digit-7-segment-display-controller)
@@ -43,12 +43,16 @@ This project is designed to run on an **ESP8266** microcontroller, which control
 - **`src/Wifi.cpp`**  
   - Manages ESP8266's connection to WiFi.
 
-- **`src/Influx.cpp`**  
-  - Fetches data from an InfluxDB database.
+- **`src/Query.cpp`**  
+  - Fetches data from an Web Server.
   - Also stores the last time an successful read was made so it can calculate the down time.
 
+- **`src/OTA.cpp`**
+  - Check for firmware updates
+  - Updates itself when new version available
+
 - **`include/Credentials.h`**  
-  - Stores WiFi and InfluxDB credentials.
+  - Stores WiFi credentials and Web Server and Update Server address.
 
 ### **PlatformIO Configuration**
 - **`platformio.ini`** – Configures PlatformIO build settings for ESP8266.
