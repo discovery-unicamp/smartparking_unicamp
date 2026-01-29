@@ -93,12 +93,19 @@ To execute the script, you need to provide some command-line arguments. Here’s
   - `partial`: Saves only essential figures.
 - `--model`: YOLO model to be used, e.g., `yolov8n`, `yolov8x`, `yolov9t`, `yolov9x`, `yolov10n`, `yolov10x`,`yolo11n`,`yolo11x`. The model will be automatically downloaded. You can also **Download some  Pre-Trained model from OSF**: [Link](https://osf.io/yq6cn/)
 - `mask_file`: Selected desired mask file. Default is all black, or not use a mask.
+- `mask_type`', Select pre or post to masking method. Default is post. To use pre processed mask you will need to prepare dataset. Refer to prepare_preprocessed_ROI_Mask_1000_750.ipynb
+
 
 ### Example usage:
 
-
+#### post processing ROI
 ```
 python3 inference_yolo_ultralytics.py --input_path ../../assets/demo_images --output_path ../../assets/results/results_yolo_ultralytics/yolov8n --savefigs debug --model yolov8n --mask_file cnrpark_mask_original_img_1000_750_bw.png
+```
+
+#### pre processing ROI
+```
+python3 inference_yolo_ultralytics.py --input_path ../../assets/croped_demo_images --output_path ../../assets/results/results_yolo_ultralytics/yolov8n_pre --savefigs debug --model yolov8n --mask_file cnrpark_mask_original_img_1000_750_bw.png --mask_type pre
 ```
 
 ---
@@ -150,3 +157,7 @@ If saving figures is enabled (`--savefigs debug` or `--savefigs partial`), this 
 To compute the result you will need the standardized script that can be found at [software/benchmarks](../benchmarks/README.md)
 
 ---
+
+### YOLOv12: 
+
+to run YOLOv12 just upgrade ultralytics lib and the same code should work.

@@ -69,6 +69,7 @@ def process_data(combined_df, base_labeled_df,dataset):
         merged_df['real_cars'] = merged_df['real_cars_y']
 
     merged_df['real_background'] = max_spots - merged_df['real_cars']
+    merged_df['MAE'] = abs(merged_df['predicted_cars'] - merged_df['real_cars'])
     merged_df.to_csv(os.path.join('./', 'merged_metrics.csv'), index=False)
     print(merged_df)
     merged_df = calculate_metrics(merged_df)
@@ -108,6 +109,8 @@ def summarize_metrics(df, base_dir_results, model, suffix=""):
     avg_processing_time = processing_times.mean()
     std_processing_time = processing_times.std()
     
+    # Mae
+    avg_mae = df['MAE'].mean()
     # Calculate metrics
     avg_bal_acc = df['bal_acc'].mean()
     
@@ -133,7 +136,8 @@ def summarize_metrics(df, base_dir_results, model, suffix=""):
         'std_processing_time_seconds': [std_processing_time],
         'balanced_accuracy_percentage': [bal_acc_percent],
         'processing_time_ms_formatted': [processing_time_ms_str],
-        'processing_time_sec_formatted': [processing_time_sec_str]
+        'processing_time_sec_formatted': [processing_time_sec_str],
+        'average_MAE': [avg_mae]
     }
     
     summary_df = pd.DataFrame(summary_data)
@@ -141,6 +145,7 @@ def summarize_metrics(df, base_dir_results, model, suffix=""):
 
     print(f"\n Processing time: {processing_time_sec_str}\n")
     print(f"\n Balanced accuracy: {bal_acc_percent}\n")
+    print(f"\n Average MAE: {avg_mae:.2f}\n")
     summary_df.to_csv(os.path.join(base_dir_results, f'summary_metrics{filename_suffix}_{model}.csv'), index=False)
 
 def save_confusion_matrix(df, base_dir_results, model, suffix=""):
