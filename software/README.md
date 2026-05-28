@@ -10,4 +10,5 @@ The files here correspond to performing benchmarks with different deep learning 
 Then, to evaluate model performance, use the benchmarking script in [software/benchmarks](benchmarks/).
 
 We also provide code for:
+- [Slicing (SAHI) & patching inference with DEIMv2, Florence-2 and YOLO](slicing/)
 - [Setting a Telegram Bot](influx/bot/)

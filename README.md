@@ -1,6 +1,6 @@
 # 🚗 Smart Parking System with Deep Learning at Unicamp
 
-This repository contains the complete implementation of a **real-time smart parking monitoring system** using **edge computing and deep learning**, representing a **decade of research** at [Unicamp](https://www.unicamp.br/).  
+This repository contains the complete implementation of a **near real-time smart parking monitoring system** using **edge computing and deep learning**, representing a **decade of research** at [Unicamp](https://www.unicamp.br/).  
 
 The system evolved through multiple research phases, culminating in real-world deployments optimized for **accuracy**, **inference speed**, and **low-power edge devices**.
 
@@ -36,7 +36,7 @@ Caso tenha **reclamações, elogios ou sugestões** sobre o Projeto IC2 Smart Pa
 
 ## Overview
 
-This system uses **deep learning-based object detection** to identify free and occupied parking spots in real-time. The design supports deployment on low-power devices such as **Raspberry Pi**, leveraging **TensorFlow Lite** optimizations for on-device inference.  
+This system uses **deep learning-based object detection** to identify free and occupied parking spots in near real-time. The design supports deployment on low-power devices such as **Raspberry Pi**, leveraging **TensorFlow Lite** optimizations for on-device inference.  
 
 It has undergone **four major research phases** since 2015, progressively improving detection accuracy, inference speed, and robustness under real-world conditions.
 
@@ -55,9 +55,10 @@ It has undergone **four major research phases** since 2015, progressively improv
 - **Advanced architecture** moving towards a **Digital Twin** with **spot-wise analysis**.
 
 **Journal Publications**
-- **[Submitted] Spot-wise smart parking: An edge-enabled architecture with YOLOv11 towards a digital twin**.  
-  Submitted to the *Journal of Internet Services and Applications (JISA)*.  
-  Preprint coming soon to **arXiv**.
+- **Spot-wise smart parking: An edge-enabled architecture with YOLOv11 towards a digital twin**.  
+  *Journal of Internet Services and Applications (JISA)*.  
+  [Final Paper on JISA](https://journals-sol.sbc.org.br/index.php/jisa/article/view/6664)
+  [Preprint](https://arxiv.org/abs/2602.01754)
 - **Smart parking with pixel-wise ROI selection for vehicle detection using YOLOv8, YOLOv9, YOLOv10, and YOLOv11**  
     *Internet of Things, Volume 36, 2026*  
     [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2542660525003725)
@@ -133,7 +134,7 @@ Key modules:
 ---
 
 ## Features
-- **Real-time detection** of parking spot occupancy.
+- **Near Real-time detection** of parking spot occupancy.
 - **Edge-optimized inference** using TensorFlow Lite.
 - **Multiple model support** (YOLO, EfficientDet, Mask R-CNN).
 - **Historical data logging** with InfluxDB.
