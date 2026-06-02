@@ -1,6 +1,6 @@
 # 🚗 Smart Parking System with Deep Learning at Unicamp
 
-This repository contains the complete implementation of a **near real-time smart parking monitoring system** using **edge computing and deep learning**, representing a **decade of research** at [Unicamp](https://www.unicamp.br/).  
+This repository contains the complete implementation of a **smart parking monitoring system** using **edge computing and deep learning**, representing a **decade of research** at [Unicamp](https://www.unicamp.br/).  
 
 The system evolved through multiple research phases, culminating in real-world deployments optimized for **accuracy**, **inference speed**, and **low-power edge devices**.
 
@@ -36,7 +36,7 @@ Caso tenha **reclamações, elogios ou sugestões** sobre o Projeto IC2 Smart Pa
 
 ## Overview
 
-This system uses **deep learning-based object detection** to identify free and occupied parking spots in near real-time. The design supports deployment on low-power devices such as **Raspberry Pi**, leveraging **TensorFlow Lite** optimizations for on-device inference.  
+This system uses **deep learning-based object detection** to identify free and occupied parking spots. The design supports deployment on low-power devices such as **Raspberry Pi**, leveraging **TensorFlow Lite** optimizations for on-device inference.  
 
 It has undergone **four major research phases** since 2015, progressively improving detection accuracy, inference speed, and robustness under real-world conditions.
 
@@ -93,7 +93,7 @@ It has undergone **four major research phases** since 2015, progressively improv
 
 ### 🔍 2020–2024 – Research Phase 2
 - Evaluation of **YOLOv3** and **Mask R-CNN**.
-- Focused on balancing accuracy and speed for real-time use.
+- Focused on balancing accuracy and speed.
 - Results published in:
   - **[SmartParking – A smart solution using Deep Learning](https://smartcampus.prefeitura.unicamp.br/pub/artigos_relatorios/PFG_Joao_Victor_Estacionamento_Inteligente.pdf)**.
 
@@ -134,7 +134,7 @@ Key modules:
 ---
 
 ## Features
-- **Near Real-time detection** of parking spot occupancy.
+- **Detection** of parking spot occupancy.
 - **Edge-optimized inference** using TensorFlow Lite.
 - **Multiple model support** (YOLO, EfficientDet, Mask R-CNN).
 - **Historical data logging** with InfluxDB.
